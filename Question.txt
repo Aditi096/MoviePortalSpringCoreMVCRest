@@ -1,0 +1,200 @@
+1)	Transient  and Detached  objects are
+
+A)	Instance of Persistance class that are not currently associated with session
+B)	Instance of Persistance class which are in session
+
+
+ANSWER----A)
+-----------------------------------------------------------------------------------------------------------------------------
+2)	The Non- argument constructor must be added in POJO class with public modifier
+
+A)	True
+B)	False
+
+ANSWER----A)
+-----------------------------------------------------------------------------------------------------------------------------
+3)	Which Annotations  use together to  join two table base of primarykey
+
+A)	@OnetoOne
+B)	@OnetoOne(mappBy="")
+C)	@PrimaryKeyJoinColumn
+D)	@JoinTable
+E)	@JoinColumn
+F)	@ManytoOne(mappBy=””)
+
+
+ANSWER----D)
+-----------------------------------------------------------------------------------------------------------------------------
+4)	What does hibernate.hbm2ddl.auto>create-drop this means
+
+A)	Hibernate will validate database schma
+B)	Hibernate will validate database schma if it is available if not it will create
+C)	Hibernate will create new table schma  every time in next run by droping previous schma
+D)	Hibernate will create new schma and also drop table schma if  sessionFactory.close() has called
+
+
+ANSWER----D)
+-----------------------------------------------------------------------------------------------------------------------------
+5)	In Which Inheritance Stratergy  hibernate will use discriminator column
+
+A)	Table per concrete class
+B)	Table per subclass
+C)	Table per class
+D)	None of these above
+
+ANSWER---C)
+-----------------------------------------------------------------------------------------------------------------------------
+6)	Which of the following is not a valid strategy for generating primary key value in Hibernate?
+	
+A)	@Id
+		@GeneratedValue(strategy=GenerationType.AUTO)
+B)	@Id
+		@GeneratedValue(strategy=GenerationType.IDENTITY)
+C)	@Id
+		@GeneratedValue(strategy=GenerationType.INCREMENT)
+D)	@Id
+		@GeneratedValue(strategy=GenerationType.TABLE)
+
+ANSWER----C)
+-----------------------------------------------------------------------------------------------------------------------------
+7)	Which of the following is a correct option to fetch the records from EmployeeDetails table where salary is greater than 20000. Consider Entity class as Employee. Use named parameter to fetch the records.
+	 
+A)	Query q=em.createQuery("select e from Employee e where e.salary>30000");
+		List list=q.list();
+
+B)	Query q=em.createQuery("select e from Employee e where e.salary > :sal");
+		q.setParameter("sal", 20000);
+		List list=q.list(); 
+
+C)	Query q=em.createQuery("select e from EmployeeDetails e where e.salary > :sal");
+		q.setParameter("sal", 20000);
+		List list=q.list();
+
+D)	Query q=em.createQuery("select e from EmployeeDetails e where e.salary > :sal");
+		q.setParameter(sal, 20000);
+		List list=q.getResultList();	
+
+
+ANSWER----D)
+-----------------------------------------------------------------------------------------------------------------------------
+8)	Which of the following primary key generation strategy can be used with any database.
+	
+A)	Auto
+B)	Identity
+C)	Table
+D)	Sequence
+
+
+ANSWER----A)
+-----------------------------------------------------------------------------------------------------------------------------
+9)	Consider the following Entity class mapped with the table Employee.
+
+@Entity
+public class Employee{
+@Id
+private int empId;
+private String empName;
+private int salary;
+//getter and setter methods
+}
+
+Select the correct option from the following to find out the total salary of all the employees in company.
+
+A)	Query q=em.createQuery("select sum(salary) from Employee ");
+
+B)	Query q=em.createQuery("select sum(e.salary) from Employee e ");
+
+C)	Query q=em.createQuery("select sum(e.salary) from Employee");
+
+
+ANSWER----D)
+-----------------------------------------------------------------------------------------------------------------------------
+
+10)	Which of the following statements are true about an Entity class?
+
+A)	An Entity must be annotated with annotation org.hibernate.annotations.Entity
+B)	Entity class must have one attribute annotated with annotation @Id
+C)	Entity class must have parametersize constructor 
+D)	An Entity must be annotated with annotation javax.persistance.Entity
+E)	Entity class must have getter and setter methods
+F)	All of the above
+
+
+ANSWER----B,D,E)
+-----------------------------------------------------------------------------------------------------------------------------
+
+11)	Which of the following annotation is used to map Collection object in a class.
+
+A)	@Collection
+B)	@ElementCollection
+C)	@Collections
+D)	None of the above
+
+
+ANSWER----D)
+-----------------------------------------------------------------------------------------------------------------------------
+
+12)What is Dependency Injection(select 2)?
+A)It is a design pattern which implements Inversion of Control for software applications.
+B)It is one of the spring module.
+C)It is a technique to get dependencies of any project.
+D)It is used to promote tight coupling in code.
+
+
+
+ANSWER----A,C)
+-----------------------------------------------------------------------------------------------------------------------------
+13)Which of the following is correct about dependency injection ?
+A)It helps in decoupling application objects from each other.
+B)It helps in deciding the dependencies of objects.
+C)It stores objects states in database.
+D)It stores object states in file system.
+
+
+ANSWER----A)
+-----------------------------------------------------------------------------------------------------------------------------
+14)What is true about cross-cutting concerns?
+A)The functions that span multiple points of an application are called cross cutting concerns.
+B)Cross-cutting concerns are conceptually separate from the application's business logic.
+C)Logging is one of the examples of cross cutting concerns.
+D)All of the above.
+
+
+
+ANSWER----D)
+-----------------------------------------------------------------------------------------------------------------------------
+14)What types of Dependency injection does spring supports?
+A)Constructor based, Setter based
+B)Constructor based, Setter based, Getter Based
+C)Setter based, Getter based, Filed based
+D)Constructor based, Setter based, Field based
+
+
+ANSWER----A)
+-----------------------------------------------------------------------------------------------------------------------------
+15)Which of the following stands true for spring beans?
+A)Spring beans are managed by the Spring IoC container.
+B)Spring beans are instantiated, assembled, and otherwise managed by a Spring IoC container.
+C)Spring beans are simple POJOs.
+D)All of the above.
+
+
+ANSWER----D)
+-----------------------------------------------------------------------------------------------------------------------------
+16)What is bean scope?
+A)Bean scope forces Spring to produce a new bean instance as per the scope defined.
+B)Bean scope defines the accessibility of bean in a java class.
+C)Bean scope defines the accessibility of bean in a java package.
+D)Bean scope defines the accessibility of bean in a web application.
+z
+
+ANSWER----A)
+-----------------------------------------------------------------------------------------------------------------------------
+17)Default scope of bean 
+A)sington
+B)Prototype
+C)Request
+D)Session
+
+
+ANSWER----A)
